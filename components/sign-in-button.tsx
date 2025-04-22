@@ -1,15 +1,13 @@
 "use client";
 
-import { signIn } from "next-auth/react";
+import SignIn from "@/components/sign-in";
 
 export default function SignInButton() {
 
     return (
         <div>
-            <h1>Sign in to view your data</h1>
-            <button onClick={async () => {
-                await signIn("github");
-            }}>Sign in with GitHub</button>
+            <h1>Sign in to GitHub to view your data</h1>
+            <SignIn provider={"github"}/>
         </div>
     );
 }
